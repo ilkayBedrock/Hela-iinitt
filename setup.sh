@@ -5,12 +5,8 @@ set -e
 clear
 echo "[*] Hela setup is starting..."
 
-# Heimdall binary'si indiriliyor
-echo "[*] Heimdall (Grimler version) downloading..."
-wget -q --show-progress https://sourceforge.net/projects/custom-android-builds/files/tools/heimdall/heimdall -O heimdall
-chmod +x heimdall
-sudo mv heimdall /usr/local/bin/
-
+echo "DO NOT FORGET TO INSTALL HEIMDALL (HENRIK GRIMLER'S FORK)"
+sleep 4
 # hela scripti kuruluyor
 echo "[*] hela command setupping..."
 sudo mv hela /usr/local/bin/hela 2>/dev/null || true
