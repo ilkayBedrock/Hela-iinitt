@@ -10,7 +10,7 @@ echo "SYSHALT after the uninstall message."
 sleep 5
 
 # 3. Remove hela binary with sudo
-echo "[*] Removing hela binary: /usr/local/bin/hela"
+echo "[*] Removing hela binary executable: /usr/local/bin/hela"
 sudo rm -rf /usr/local/bin/hela*
 
 # 4. Remove tmp files
