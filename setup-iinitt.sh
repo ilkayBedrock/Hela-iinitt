@@ -25,27 +25,9 @@ done
 EOF
 sudo chmod +x /usr/local/bin/hela-watchdog.sh
 
-# Systemd servisi tanımlanıyor
-echo "[*] hela-watchdog service creation..."
-sudo tee /etc/systemd/system/hela-watchdog.service > /dev/null << EOF
-[Unit]
-Description=Hela Watchdog - USB connection contoller
-After=multi-user.target
-
-[Service]
-ExecStart=/usr/local/bin/hela-watchdog.sh
-Restart=always
-
-[Install]
-WantedBy=multi-user.target
-EOF
-
-# Servis etkinleştiriliyor
-echo "[*] Reloading the daemon & starting hela-watchdog service..."
-sudo systemctl daemon-reexec
-sudo systemctl daemon-reload
-sudo systemctl enable hela-watchdog.service > /dev/null
-sudo systemctl start hela-watchdog.service
+# Servis icin ne yapilmasi gerektigi echolaniyor
+echo "Please add this: 'start_service("/usr/local/bin/hela-watchdog.sh");' line to your iinitt.c file and rebuild it..."
+echo "Then SYSHALT the system (Ctrl+Alt+Del)"
 
 echo ""
 echo "[✓] Hela is now ready"
