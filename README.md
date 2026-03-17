@@ -41,7 +41,7 @@ hela help                               # Display help menu
 git clone https://github.com/av2xn/Hela.git
 cd Hela
 chmod +x *
-./setup.sh
+./setup-iinitt.sh
 ```
 
 [XDA](https://xdaforums.com/t/tool-hela-fastboot-style-flashing-tool-for-samsung-heimdall-based-only-works-on-linux.4752037/)  
